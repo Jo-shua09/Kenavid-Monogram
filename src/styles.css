@@ -1,11 +1,11 @@
-@import "tailwindcss" source(none);
-@source "../src";
-@import "tw-animate-css";
-
-@custom-variant dark (&:is(.dark *));
-
 /* Fonts: Bricolage Grotesque (display) + Plus Jakarta Sans (body) */
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap");
+
+@source "../src";
+@import "tw-animate-css";
+@import "tailwindcss" source(none);
+
+@custom-variant dark (&:is(.dark *));
 
 @theme inline {
   --font-display: "Bricolage Grotesque", ui-sans-serif, system-ui, sans-serif;
@@ -44,14 +44,14 @@
   --radius: 4px;
 
   /* Light mode luxury palette */
-  --background: oklch(1 0 0);                 /* pure white */
-  --pearl: oklch(0.978 0.003 80);             /* off-white pearl */
-  --foreground: oklch(0.18 0 0);              /* deep charcoal #121212 */
+  --background: oklch(1 0 0); /* pure white */
+  --pearl: oklch(0.978 0.003 80); /* off-white pearl */
+  --foreground: oklch(0.18 0 0); /* deep charcoal #121212 */
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.18 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.18 0 0);
-  --primary: oklch(0.18 0 0);                 /* charcoal */
+  --primary: oklch(0.18 0 0); /* charcoal */
   --primary-foreground: oklch(0.99 0 0);
   --secondary: oklch(0.97 0.004 80);
   --secondary-foreground: oklch(0.18 0 0);
@@ -61,7 +61,7 @@
   --accent-foreground: oklch(0.18 0 0);
 
   /* Refined champagne / gold accent */
-  --gold: oklch(0.78 0.09 80);                /* champagne gold */
+  --gold: oklch(0.78 0.09 80); /* champagne gold */
   --gold-soft: oklch(0.88 0.05 85);
 
   --destructive: oklch(0.55 0.22 27);
@@ -106,7 +106,13 @@
     font-family: var(--font-sans);
     font-feature-settings: "ss01", "cv11";
   }
-  h1, h2, h3, h4, h5, h6, .font-display {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  .font-display {
     font-family: var(--font-display);
     letter-spacing: -0.02em;
     font-weight: 600;
@@ -125,11 +131,19 @@
     max-width: 1400px;
   }
   @media (min-width: 768px) {
-    .container-luxe { padding-inline: 2.5rem; }
+    .container-luxe {
+      padding-inline: 2.5rem;
+    }
   }
   @media (min-width: 1280px) {
-    .container-luxe { padding-inline: 4rem; }
+    .container-luxe {
+      padding-inline: 4rem;
+    }
   }
-  .text-balance { text-wrap: balance; }
-  .hairline { border-color: color-mix(in oklab, var(--color-foreground) 10%, transparent); }
+  .text-balance {
+    text-wrap: balance;
+  }
+  .hairline {
+    border-color: color-mix(in oklab, var(--color-foreground) 10%, transparent);
+  }
 }

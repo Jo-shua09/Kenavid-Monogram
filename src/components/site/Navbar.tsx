@@ -40,14 +40,18 @@ export function Navbar() {
     <>
       <header
         className={cn(
-          "fixed top-0 inset-x-0 z-40 transition-all duration-500",
+          "fixed top-0 inset-x-0 z-[70] transition-all duration-500",
           scrolled && !open
             ? "bg-background/75 backdrop-blur-xl border-b hairline"
             : "bg-transparent",
         )}
       >
         <div className="container-luxe flex items-center justify-between h-16 md:h-20">
-          <Link to="/" className="flex items-center gap-3 group" aria-label="Kenavid Monogram — Home">
+          <Link
+            to="/"
+            className="flex items-center gap-3 group"
+            aria-label="Kenavid Monogram — Home"
+          >
             <img
               src={logo}
               alt="Kenavid Couture monogram crest logo"
@@ -59,8 +63,15 @@ export function Navbar() {
               )}
             />
             <span className="hidden sm:flex flex-col leading-none">
-              <span className={cn("font-display text-sm tracking-tight", open && "text-white")}>KENAVID</span>
-              <span className={cn("text-[10px] tracking-[0.3em] uppercase", open ? "text-white/60" : "text-muted-foreground")}>
+              <span className={cn("font-display text-sm tracking-tight", open && "text-white")}>
+                KENAVID
+              </span>
+              <span
+                className={cn(
+                  "text-[10px] tracking-[0.3em] uppercase",
+                  open ? "text-white/60" : "text-muted-foreground",
+                )}
+              >
                 Monogram
               </span>
             </span>
@@ -93,14 +104,16 @@ export function Navbar() {
             onClick={() => setOpen((v) => !v)}
             className={cn(
               "lg:hidden relative z-[70] h-10 w-10 grid place-items-center border transition-colors",
-              open
-                ? "border-white text-white bg-transparent"
-                : "border-foreground text-foreground",
+              open ? "border-white text-white bg-transparent" : "border-foreground text-foreground",
             )}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
           >
-            {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
+            {open ? (
+              <X className="h-4 w-4" />
+            ) : (
+              <Menu className={`h-4 w-4 ${!open ? " text-gold" : ""}`} />
+            )}
           </button>
         </div>
       </header>

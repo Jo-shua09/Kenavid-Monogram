@@ -1,69 +1,84 @@
-# React + TypeScript + Vite
+# Kenavid Monogram — Premium Embroidery Atelier
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Premium monogram embroidery production and machine operation training academy based in Lagos, Nigeria. Founded by Victor Atoyebi.
 
-Currently, two official plugins are available:
+This repository contains the front-end application for the Kenavid Monogram website, built as a blazing-fast Single Page Application (SPA).
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Tech Stack
 
-## Expanding the ESLint configuration
+- **Framework:** [React 19](https://react.dev/)
+- **Build Tool:** [Vite](https://vitejs.dev/)
+- **Routing:** [TanStack Router](https://tanstack.com/router) (Type-safe routing)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/)
+- **Animations:** [Framer Motion](https://www.framer.com/motion/)
+- **UI Components:** [Radix UI](https://www.radix-ui.com/)
+- **Icons:** [Lucide React](https://lucide.dev/)
+- **Forms & Validation:** React Hook Form + Zod
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 📦 Getting Started
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### Prerequisites
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+- Node.js (v18 or higher recommended)
+- npm, yarn, pnpm, or bun
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/your-username/kenavid-monogram.git
+   cd kenavid-monogram
+   ```
+
+2. Install dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+
+   ```bash
+   npm run dev
+   ```
+
+4. Open [http://localhost:5173](http://localhost:5173) to view it in your browser.
+
+## 🛠️ Available Scripts
+
+- `npm run dev` - Starts the Vite development server.
+- `npm run build` - Builds the app for production (outputs to `dist/`).
+- `npm run preview` - Locally preview the production build.
+- `npm run lint` - Runs ESLint to check for code issues.
+- `npm run format` - Formats code using Prettier.
+
+## 📂 Project Structure
+
+```text
+src/
+├── assets/           # Static images, posters, and icons
+├── components/       # Reusable React components (UI, site-specific)
+├── lib/              # Utility functions, WhatsApp configs, and helpers
+├── routes/           # TanStack file-based routing components
+│   ├── __root.tsx    # Root layout and global SEO metadata
+│   ├── index.tsx     # Home page
+│   ├── services.tsx  # Services & Production page
+│   ├── training.tsx  # Academy & Training page
+│   ├── gallery.tsx   # Curated works gallery
+│   └── contact.tsx   # Contact and location
+├── main.tsx          # Application entry point
+└── styles.css        # Global CSS and Tailwind directives
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🌍 Deployment
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project is fully optimized for deployment on **Vercel** as a Client-Side Routed SPA.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+The repository includes a `vercel.json` configuration file at the root. This ensures that Vercel routes all requests (like `/services` or `/training`) back to `index.html` so that TanStack Router can handle the client-side navigation without triggering 404 Not Found errors on page refresh.
+
+To deploy:
+
+1. Push your code to GitHub.
+2. Import the project in your Vercel dashboard.
+3. The default Vite build settings (`npm run build`, `dist` directory) will work automatically.
