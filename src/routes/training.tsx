@@ -14,13 +14,13 @@ import { Check } from "lucide-react";
 export const Route = createFileRoute("/training")({
   head: () => ({
     meta: [
-      { title: "Machine Operation Academy — Kenavid Monogram" },
+      { title: "Machine Operation Academy - Kenavid Monogram" },
       {
         name: "description",
         content:
           "Hands-on monogram machine operation training in Lagos. Learn industrial multi-needle embroidery from day one.",
       },
-      { property: "og:title", content: "Machine Operation Academy — Kenavid Monogram" },
+      { property: "og:title", content: "Machine Operation Academy - Kenavid Monogram" },
       {
         property: "og:description",
         content:
@@ -62,17 +62,25 @@ function Hero() {
         />
         <FadeIn delay={0.6}>
           <p className="mt-8 text-lg text-background/70 max-w-2xl leading-relaxed">
-            A hands-on, cohort-based training program where you learn to
-            operate, calibrate, troubleshoot, and produce on industrial
-            multi-needle embroidery machines — taught by working professionals.
+            A hands-on, cohort-based training program where you learn to operate, calibrate,
+            troubleshoot, and produce on industrial multi-needle embroidery machines - taught by
+            working professionals.
           </p>
         </FadeIn>
         <FadeIn delay={0.8}>
           <div className="mt-10 flex flex-wrap gap-4">
-            <WhatsAppButton message={waMessages.training} variant="solid" className="bg-background text-foreground hover:bg-[oklch(0.85_0.08_85)]">
+            <WhatsAppButton
+              message={waMessages.training}
+              variant="solid"
+              className="bg-background text-foreground hover:bg-[oklch(0.85_0.08_85)]"
+            >
               Book a Training
             </WhatsAppButton>
-            <WhatsAppButton message={waMessages.training} variant="outline" className="border-background text-background hover:bg-background hover:text-foreground">
+            <WhatsAppButton
+              message={waMessages.training}
+              variant="outline"
+              className="border-background text-background hover:bg-background hover:text-foreground"
+            >
               Download Brochure
             </WhatsAppButton>
           </div>
@@ -99,10 +107,10 @@ function Intro() {
         </FadeIn>
         <FadeIn delay={0.2}>
           <p className="mt-8 text-lg text-foreground/70 leading-relaxed max-w-2xl">
-            Our program is engineered for one thing: making you self-sufficient
-            on a multi-needle embroidery machine. From the first session you
-            are touching the machine, threading needles, hooping fabric, and
-            running real production — under the watch of an experienced operator.
+            Our program is engineered for one thing: making you self-sufficient on a multi-needle
+            embroidery machine. From the first session you are touching the machine, threading
+            needles, hooping fabric, and running real production - under the watch of an experienced
+            operator.
           </p>
         </FadeIn>
         <FadeIn delay={0.3}>
@@ -130,37 +138,67 @@ function Curriculum() {
       n: "Week 01",
       t: "Machine Anatomy & Setup",
       d: "Identify every component, lubricate, thread the head, set tension, and prepare the machine for daily production.",
-      pts: ["Threading 9-15 needle heads", "Bobbin winding & casing", "Tension calibration", "Daily maintenance routines"],
+      pts: [
+        "Threading 9-15 needle heads",
+        "Bobbin winding & casing",
+        "Tension calibration",
+        "Daily maintenance routines",
+      ],
     },
     {
       n: "Week 02",
       t: "Hooping & Stabilizers",
       d: "The single most important skill. Learn to hoop perfectly straight, choose the right stabilizer for each fabric, and avoid puckering.",
-      pts: ["Cut-away vs tear-away", "Wash-away & topping films", "Hoop sizing & alignment", "Cap framing"],
+      pts: [
+        "Cut-away vs tear-away",
+        "Wash-away & topping films",
+        "Hoop sizing & alignment",
+        "Cap framing",
+      ],
     },
     {
       n: "Week 03",
       t: "File Loading & Color Sequencing",
       d: "Read DST/PES files, assign needles to colors, plan the most efficient sequence, and trim jumps cleanly.",
-      pts: ["USB & direct file load", "Color path planning", "Trim & jump optimization", "Production scheduling"],
+      pts: [
+        "USB & direct file load",
+        "Color path planning",
+        "Trim & jump optimization",
+        "Production scheduling",
+      ],
     },
     {
       n: "Week 04",
       t: "Production & Quality Control",
       d: "Run real client jobs under supervision. Learn to spot density issues, registration drift, and finish quality before sign-off.",
-      pts: ["Live job execution", "QC checkpoints", "Speed vs quality balance", "Pressing & finishing"],
+      pts: [
+        "Live job execution",
+        "QC checkpoints",
+        "Speed vs quality balance",
+        "Pressing & finishing",
+      ],
     },
     {
       n: "Week 05",
       t: "Digitization Fundamentals",
       d: "Convert simple logos and monograms into stitch files. Understand density, pull compensation, and underlay.",
-      pts: ["Software navigation", "Stitch types overview", "Pull compensation", "First-file project"],
+      pts: [
+        "Software navigation",
+        "Stitch types overview",
+        "Pull compensation",
+        "First-file project",
+      ],
     },
     {
       n: "Week 06",
       t: "Business & Certification",
-      d: "Pricing, client briefing, packaging, and your final certification piece — produced start-to-finish unsupervised.",
-      pts: ["Pricing your work", "Client communication", "Final assessment", "Certificate of completion"],
+      d: "Pricing, client briefing, packaging, and your final certification piece - produced start-to-finish unsupervised.",
+      pts: [
+        "Pricing your work",
+        "Client communication",
+        "Final assessment",
+        "Certificate of completion",
+      ],
     },
   ];
 
@@ -176,9 +214,9 @@ function Curriculum() {
           </FadeIn>
           <FadeIn delay={0.15} className="lg:col-span-6 lg:col-start-7">
             <p className="text-foreground/70 text-lg leading-relaxed">
-              Every module is taught on the same equipment used in our live
-              production studio — Kenavid Monogram industrial multi-needle
-              machines. You will leave knowing the machine inside-out.
+              Every module is taught on the same equipment used in our live production studio -
+              Kenavid Monogram industrial multi-needle machines. You will leave knowing the machine
+              inside-out.
             </p>
           </FadeIn>
         </div>
@@ -187,10 +225,16 @@ function Curriculum() {
             <FadeIn key={m.n} delay={(i % 2) * 0.08}>
               <div className="bg-[var(--pearl)] p-8 md:p-10 h-full">
                 <div className="flex items-baseline justify-between">
-                  <p className="text-xs tracking-[0.3em] uppercase text-[oklch(0.7_0.09_80)]">{m.n}</p>
-                  <p className="text-[10px] tracking-[0.3em] uppercase text-foreground/40">Module 0{i + 1}</p>
+                  <p className="text-xs tracking-[0.3em] uppercase text-[oklch(0.7_0.09_80)]">
+                    {m.n}
+                  </p>
+                  <p className="text-[10px] tracking-[0.3em] uppercase text-foreground/40">
+                    Module 0{i + 1}
+                  </p>
                 </div>
-                <h3 className="mt-6 font-display text-3xl md:text-4xl leading-tight tracking-tight">{m.t}</h3>
+                <h3 className="mt-6 font-display text-3xl md:text-4xl leading-tight tracking-tight">
+                  {m.t}
+                </h3>
                 <p className="mt-4 text-foreground/65 leading-relaxed">{m.d}</p>
                 <ul className="mt-6 grid grid-cols-1 sm:grid-cols-2 gap-2">
                   {m.pts.map((p) => (
@@ -213,7 +257,9 @@ function Outcomes() {
   return (
     <section className="container-luxe py-24 md:py-32 grid lg:grid-cols-2 gap-16 items-center">
       <div>
-        <FadeIn><SectionLabel index="03">What You Leave With</SectionLabel></FadeIn>
+        <FadeIn>
+          <SectionLabel index="03">What You Leave With</SectionLabel>
+        </FadeIn>
         <FadeIn delay={0.1}>
           <h2 className="mt-6 font-display text-4xl md:text-5xl lg:text-6xl leading-[0.95] tracking-tight">
             Real skills. Real income potential.
@@ -250,7 +296,9 @@ function Logistics() {
     <section className="bg-foreground text-background py-24 md:py-32">
       <div className="container-luxe">
         <FadeIn>
-          <p className="text-[10px] tracking-[0.32em] uppercase text-background/60">⊹ 04 — Logistics</p>
+          <p className="text-[10px] tracking-[0.32em] uppercase text-background/60">
+            ⊹ 04 - Logistics
+          </p>
         </FadeIn>
         <FadeIn delay={0.1}>
           <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[0.95] tracking-tight max-w-3xl">
@@ -260,7 +308,7 @@ function Logistics() {
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-background/10">
           {[
             ["Format", "In-person, hands-on"],
-            ["Schedule", "Mon — Fri, 9am — 2pm"],
+            ["Schedule", "Mon - Fri, 9am - 2pm"],
             ["Location", "Egbeda, Lagos"],
             ["Class Size", "Maximum 6 students"],
             ["Equipment", "Provided on-site"],
@@ -270,7 +318,9 @@ function Logistics() {
           ].map(([k, v]) => (
             <FadeIn key={k}>
               <div className="bg-foreground p-8 h-full">
-                <p className="text-[10px] uppercase tracking-[0.3em] text-[oklch(0.85_0.08_85)]">{k}</p>
+                <p className="text-[10px] uppercase tracking-[0.3em] text-[oklch(0.85_0.08_85)]">
+                  {k}
+                </p>
                 <p className="mt-4 font-display text-2xl">{v}</p>
               </div>
             </FadeIn>
@@ -281,9 +331,15 @@ function Logistics() {
             <div>
               <p className="text-[10px] tracking-[0.3em] uppercase text-background/50">Tuition</p>
               <p className="mt-3 font-display text-5xl md:text-6xl">₦250,000</p>
-              <p className="mt-3 text-sm text-background/60">All materials, machine time, and certification included. Payment plans available.</p>
+              <p className="mt-3 text-sm text-background/60">
+                All materials, machine time, and certification included. Payment plans available.
+              </p>
             </div>
-            <WhatsAppButton message={waMessages.training} className="bg-background text-foreground hover:bg-[oklch(0.85_0.08_85)]" size="lg">
+            <WhatsAppButton
+              message={waMessages.training}
+              className="bg-background text-foreground hover:bg-[oklch(0.85_0.08_85)]"
+              size="lg"
+            >
               Book Your Seat
             </WhatsAppButton>
           </div>
@@ -299,7 +355,9 @@ function Enroll() {
       <img src={m17} alt="" className="absolute inset-0 h-full w-full object-cover opacity-15" />
       <div className="container-luxe relative text-center">
         <FadeIn>
-          <p className="text-[10px] tracking-[0.32em] uppercase text-foreground/60">⊹ Reserve a Seat</p>
+          <p className="text-[10px] tracking-[0.32em] uppercase text-foreground/60">
+            ⊹ Reserve a Seat
+          </p>
         </FadeIn>
         <FadeIn delay={0.1}>
           <h2 className="mt-6 font-display text-5xl md:text-7xl lg:text-8xl leading-[0.92] tracking-tight max-w-5xl mx-auto text-balance">
@@ -308,13 +366,15 @@ function Enroll() {
         </FadeIn>
         <FadeIn delay={0.2}>
           <p className="mt-8 text-foreground/65 max-w-xl mx-auto text-lg">
-            Class sizes are capped at six. Reserve your seat by sending us a
-            quick WhatsApp — we'll respond within working hours.
+            Class sizes are capped at six. Reserve your seat by sending us a quick WhatsApp - we'll
+            respond within working hours.
           </p>
         </FadeIn>
         <FadeIn delay={0.3}>
           <div className="mt-12 flex flex-wrap justify-center gap-4">
-            <WhatsAppButton message={waMessages.training} size="lg">Book a Training</WhatsAppButton>
+            <WhatsAppButton message={waMessages.training} size="lg">
+              Book a Training
+            </WhatsAppButton>
           </div>
         </FadeIn>
       </div>

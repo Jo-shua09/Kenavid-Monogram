@@ -12,13 +12,13 @@ import { cn } from "@/lib/utils";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Kenavid Monogram" },
+      { title: "Gallery - Kenavid Monogram" },
       {
         name: "description",
         content:
-          "A curated archive of premium monogram embroidery — apparel, accessories, heritage pieces, and atelier work.",
+          "A curated archive of premium monogram embroidery - apparel, accessories, heritage pieces, and atelier work.",
       },
-      { property: "og:title", content: "Gallery — Kenavid Monogram" },
+      { property: "og:title", content: "Gallery - Kenavid Monogram" },
       {
         property: "og:description",
         content:
@@ -53,8 +53,8 @@ function Gallery() {
         />
         <FadeIn delay={0.6}>
           <p className="mt-8 text-lg text-foreground/65 max-w-2xl leading-relaxed">
-            A growing archive of pieces produced in our Lagos atelier — from
-            single bespoke commissions to brand collaborations and academy work.
+            A growing archive of pieces produced in our Lagos atelier - from single bespoke
+            commissions to brand collaborations and academy work.
           </p>
         </FadeIn>
       </section>
@@ -106,7 +106,9 @@ function Gallery() {
                   className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
                 />
                 <figcaption className="absolute inset-x-0 bottom-0 p-4 md:p-5 bg-gradient-to-t from-foreground/85 to-transparent text-background opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <p className="text-[9px] uppercase tracking-[0.3em] text-[oklch(0.85_0.08_85)]">{g.category}</p>
+                  <p className="text-[9px] uppercase tracking-[0.3em] text-[oklch(0.85_0.08_85)]">
+                    {g.category}
+                  </p>
                   <p className="mt-1 text-xs leading-snug">{g.alt}</p>
                 </figcaption>
               </motion.figure>

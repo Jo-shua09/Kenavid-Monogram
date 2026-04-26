@@ -36,6 +36,11 @@ export function Navbar() {
     };
   }, [open]);
 
+  // Check if we are at the top of a page that has a dark hero section
+  const currentPath = location.pathname.replace(/\/$/, "") || "/";
+  const isDarkHero = ["/", "/services", "/training"].includes(currentPath);
+  const useLightText = open || (!scrolled && isDarkHero);
+
   return (
     <>
       <header
@@ -50,7 +55,7 @@ export function Navbar() {
           <Link
             to="/"
             className="flex items-center gap-3 group"
-            aria-label="Kenavid Monogram — Home"
+            aria-label="Kenavid Monogram - Home"
           >
             <img
               src={logo}
@@ -59,17 +64,19 @@ export function Navbar() {
               height={44}
               className={cn(
                 "h-10 w-10 md:h-11 md:w-11 object-contain transition-transform duration-500 group-hover:scale-105",
-                open && "brightness-0 invert",
+                useLightText && "brightness-0 invert",
               )}
             />
             <span className="hidden sm:flex flex-col leading-none">
-              <span className={cn("font-display text-sm tracking-tight", open && "text-white")}>
+              <span
+                className={cn("font-display text-sm tracking-tight", useLightText && "text-white")}
+              >
                 KENAVID
               </span>
               <span
                 className={cn(
                   "text-[10px] tracking-[0.3em] uppercase",
-                  open ? "text-white/60" : "text-muted-foreground",
+                  useLightText ? "text-white/60" : "text-muted-foreground",
                 )}
               >
                 Monogram
@@ -83,10 +90,17 @@ export function Navbar() {
                 key={l.to}
                 to={l.to}
                 activeOptions={{ exact: l.to === "/" }}
-                className="relative text-xs uppercase tracking-[0.22em] font-medium text-foreground/80 hover:text-foreground transition-colors py-2"
+                className={cn(
+                  "relative text-xs uppercase tracking-[0.22em] font-medium transition-colors py-2",
+                  useLightText
+                    ? "text-white/80 hover:text-white"
+                    : "text-foreground/80 hover:text-foreground",
+                )}
                 activeProps={{
-                  className:
-                    "text-foreground after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-px after:bg-[oklch(0.78_0.09_80)]",
+                  className: cn(
+                    useLightText ? "text-white" : "text-foreground",
+                    "after:content-[''] after:absolute after:left-0 after:right-0 after:-bottom-1 after:h-px after:bg-[oklch(0.78_0.09_80)]",
+                  ),
                 }}
               >
                 {l.label}
@@ -95,7 +109,15 @@ export function Navbar() {
           </nav>
 
           <div className="hidden lg:block">
-            <WhatsAppButton message={waMessages.general} variant="solid" size="sm">
+            <WhatsAppButton
+              message={waMessages.general}
+              variant="solid"
+              size="sm"
+              className={cn(
+                useLightText &&
+                  "bg-white text-foreground hover:bg-[oklch(0.78_0.09_80)] hover:text-foreground",
+              )}
+            >
               Inquire
             </WhatsAppButton>
           </div>
@@ -104,16 +126,14 @@ export function Navbar() {
             onClick={() => setOpen((v) => !v)}
             className={cn(
               "lg:hidden relative z-[70] h-10 w-10 grid place-items-center border transition-colors",
-              open ? "border-white text-white bg-transparent" : "border-foreground text-foreground",
+              useLightText
+                ? "border-white text-white bg-transparent"
+                : "border-foreground text-foreground",
             )}
             aria-label={open ? "Close menu" : "Open menu"}
             aria-expanded={open}
           >
-            {open ? (
-              <X className="h-4 w-4" />
-            ) : (
-              <Menu className={`h-4 w-4 ${!open ? " text-gold" : ""}`} />
-            )}
+            {open ? <X className="h-4 w-4" /> : <Menu className="h-4 w-4" />}
           </button>
         </div>
       </header>

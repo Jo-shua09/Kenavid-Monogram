@@ -2,6 +2,7 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts } from "@tanstack/r
 
 import { Navbar } from "@/components/site/Navbar";
 import { Footer } from "@/components/site/Footer";
+import { Preloader } from "@/components/site/Preloader";
 
 function NotFoundComponent() {
   return (
@@ -30,7 +31,7 @@ export const Route = createRootRoute({
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Kenavid Monogram — Premium Embroidery & Machine Training in Lagos" },
+      { title: "Kenavid Monogram - Premium Embroidery & Machine Training in Lagos" },
       {
         name: "description",
         content:
@@ -52,7 +53,7 @@ export const Route = createRootRoute({
       { property: "og:locale", content: "en_NG" },
       {
         property: "og:title",
-        content: "Kenavid Monogram — Premium Embroidery & Machine Training in Lagos",
+        content: "Kenavid Monogram - Premium Embroidery & Machine Training in Lagos",
       },
       {
         property: "og:description",
@@ -65,7 +66,7 @@ export const Route = createRootRoute({
       { name: "twitter:card", content: "summary_large_image" },
       {
         name: "twitter:title",
-        content: "Kenavid Monogram — Premium Embroidery & Machine Training in Lagos",
+        content: "Kenavid Monogram - Premium Embroidery & Machine Training in Lagos",
       },
       {
         name: "twitter:description",
@@ -128,6 +129,7 @@ export const Route = createRootRoute({
 function RootComponent() {
   return (
     <>
+      <Preloader />
       <HeadContent />
       <div className="min-h-screen flex flex-col bg-background text-foreground">
         <Navbar />

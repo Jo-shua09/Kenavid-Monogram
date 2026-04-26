@@ -20,13 +20,13 @@ import { ArrowUpRight } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Kenavid Monogram — Premium Embroidery At Its Finest | Lagos" },
+      { title: "Kenavid Monogram - Premium Embroidery At Its Finest | Lagos" },
       {
         name: "description",
         content:
           "Premium monogram embroidery and machine operation training in Lagos. Precision craftsmanship for brands, designers, and individuals.",
       },
-      { property: "og:title", content: "Kenavid Monogram — Embroidery At Its Finest" },
+      { property: "og:title", content: "Kenavid Monogram - Embroidery At Its Finest" },
       {
         property: "og:description",
         content:
@@ -95,9 +95,8 @@ function Hero() {
             transition={{ delay: 1.4, duration: 0.9 }}
             className="text-base md:text-lg text-background/80 leading-relaxed max-w-md"
           >
-            Precision-crafted premium monogram designs and expert machine
-            operation training — built for brands, designers, and individuals
-            who demand more than ordinary stitching.
+            Precision-crafted premium monogram designs and expert machine operation training - built
+            for brands, designers, and individuals who demand more than ordinary stitching.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 16 }}
@@ -136,9 +135,7 @@ function Hero() {
           ].map(([k, v]) => (
             <div key={v}>
               <p className="font-display text-3xl md:text-4xl">{k}</p>
-              <p className="text-xs uppercase tracking-[0.22em] text-background/60 mt-2">
-                {v}
-              </p>
+              <p className="text-xs uppercase tracking-[0.22em] text-background/60 mt-2">{v}</p>
             </div>
           ))}
         </motion.div>
@@ -153,7 +150,11 @@ function About() {
       <div className="container-luxe grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
         <FadeIn className="lg:col-span-5">
           <div className="relative">
-            <HoverImage src={founderImg} alt="Victor Atoyebi, founder of Kenavid Monogram" ratio="tall" />
+            <HoverImage
+              src={founderImg}
+              alt="Victor Atoyebi, founder of Kenavid Monogram"
+              ratio="tall"
+            />
             <div className="absolute -bottom-6 -right-6 hidden md:block bg-foreground text-background px-6 py-4">
               <p className="text-[10px] tracking-[0.3em] uppercase opacity-60">Founder</p>
               <p className="font-display text-xl mt-1">Victor Atoyebi</p>
@@ -172,17 +173,16 @@ function About() {
           <FadeIn delay={0.2}>
             <p className="mt-8 text-lg text-foreground/70 leading-relaxed max-w-2xl">
               Founded in 2025 by <strong className="text-foreground">Victor Atoyebi</strong>,
-              Kenavid Monogram — Monogram Empire — was born from a refusal to accept
-              average. Every stitch placed in our workshop is the product of
-              patient calibration, premium materials, and a near-obsessive
-              respect for the finished piece.
+              Kenavid Monogram - Monogram Empire - was born from a refusal to accept average. Every
+              stitch placed in our workshop is the product of patient calibration, premium
+              materials, and a near-obsessive respect for the finished piece.
             </p>
           </FadeIn>
           <FadeIn delay={0.3}>
             <p className="mt-6 text-base text-foreground/60 leading-relaxed max-w-2xl">
-              We serve fashion houses, corporate clients, hospitality groups,
-              wedding planners, and discerning individuals — and we train the
-              next generation of operators through our hands-on academy.
+              We serve fashion houses, corporate clients, hospitality groups, wedding planners, and
+              discerning individuals - and we train the next generation of operators through our
+              hands-on academy.
             </p>
           </FadeIn>
           <FadeIn delay={0.4}>
@@ -251,16 +251,12 @@ function TheSplit() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/85 via-foreground/10 to-transparent" />
                   <div className="absolute inset-0 flex flex-col justify-between p-8 md:p-10 text-background">
-                    <p className="text-[10px] tracking-[0.32em] uppercase opacity-80">
-                      {c.label}
-                    </p>
+                    <p className="text-[10px] tracking-[0.32em] uppercase opacity-80">{c.label}</p>
                     <div>
                       <h3 className="font-display text-3xl md:text-5xl leading-[1] tracking-tight max-w-[14ch]">
                         {c.title}
                       </h3>
-                      <p className="mt-4 text-sm text-background/80 max-w-md">
-                        {c.desc}
-                      </p>
+                      <p className="mt-4 text-sm text-background/80 max-w-md">{c.desc}</p>
                       <div className="mt-8 inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] border-b border-background/60 pb-1 group-hover:border-[oklch(0.85_0.08_85)] group-hover:text-[oklch(0.85_0.08_85)] transition-colors">
                         {c.cta} <ArrowUpRight className="h-4 w-4" />
                       </div>
@@ -278,19 +274,45 @@ function TheSplit() {
 
 function Capabilities() {
   const items = [
-    { n: "01", t: "Custom Monograms", d: "Cursive, serif, modern, heraldic — designed and stitched to your exact specification." },
-    { n: "02", t: "Logo Digitization", d: "Conversion of logos into stitch-perfect embroidery files for crisp, scalable execution." },
-    { n: "03", t: "Bulk Production", d: "Uniforms, hospitality linens, corporate apparel — produced at scale without losing detail." },
-    { n: "04", t: "Heritage & Bridal", d: "Wedding handkerchiefs, ceremonial garments, and family-crest commissions." },
-    { n: "05", t: "Brand Collaboration", d: "Capsule collections and signature embroidery for fashion houses and designers." },
-    { n: "06", t: "Operator Training", d: "Six-week hands-on certification on multi-needle industrial embroidery machines." },
+    {
+      n: "01",
+      t: "Custom Monograms",
+      d: "Cursive, serif, modern, heraldic - designed and stitched to your exact specification.",
+    },
+    {
+      n: "02",
+      t: "Logo Digitization",
+      d: "Conversion of logos into stitch-perfect embroidery files for crisp, scalable execution.",
+    },
+    {
+      n: "03",
+      t: "Bulk Production",
+      d: "Uniforms, hospitality linens, corporate apparel - produced at scale without losing detail.",
+    },
+    {
+      n: "04",
+      t: "Heritage & Bridal",
+      d: "Wedding handkerchiefs, ceremonial garments, and family-crest commissions.",
+    },
+    {
+      n: "05",
+      t: "Brand Collaboration",
+      d: "Capsule collections and signature embroidery for fashion houses and designers.",
+    },
+    {
+      n: "06",
+      t: "Operator Training",
+      d: "Six-week hands-on certification on multi-needle industrial embroidery machines.",
+    },
   ];
   return (
     <section className="py-24 md:py-40">
       <div className="container-luxe">
         <div className="grid lg:grid-cols-12 gap-10 mb-16">
           <div className="lg:col-span-5">
-            <FadeIn><SectionLabel index="03">Capabilities</SectionLabel></FadeIn>
+            <FadeIn>
+              <SectionLabel index="03">Capabilities</SectionLabel>
+            </FadeIn>
             <FadeIn delay={0.1}>
               <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[0.95] tracking-tight">
                 What we do, in detail.
@@ -299,9 +321,9 @@ function Capabilities() {
           </div>
           <FadeIn delay={0.2} className="lg:col-span-6 lg:col-start-7">
             <p className="text-foreground/70 text-lg leading-relaxed">
-              From a single monogrammed handkerchief to a thousand uniformed
-              pieces, our process scales without diluting the discipline. Below
-              is a curated selection of what we are commissioned to do most often.
+              From a single monogrammed handkerchief to a thousand uniformed pieces, our process
+              scales without diluting the discipline. Below is a curated selection of what we are
+              commissioned to do most often.
             </p>
           </FadeIn>
         </div>
@@ -310,10 +332,14 @@ function Capabilities() {
             <FadeIn key={it.n} delay={(i % 3) * 0.1}>
               <div className="p-8 md:p-10 border-b border-r hairline group hover:bg-[var(--pearl)] transition-colors h-full">
                 <div className="flex items-start justify-between mb-10">
-                  <span className="text-xs tracking-[0.22em] text-[oklch(0.7_0.09_80)]">{it.n}</span>
+                  <span className="text-xs tracking-[0.22em] text-[oklch(0.7_0.09_80)]">
+                    {it.n}
+                  </span>
                   <ArrowUpRight className="h-5 w-5 opacity-30 group-hover:opacity-100 transition-opacity" />
                 </div>
-                <h3 className="font-display text-2xl md:text-3xl leading-tight tracking-tight">{it.t}</h3>
+                <h3 className="font-display text-2xl md:text-3xl leading-tight tracking-tight">
+                  {it.t}
+                </h3>
                 <p className="mt-4 text-sm text-foreground/65 leading-relaxed">{it.d}</p>
               </div>
             </FadeIn>
@@ -326,11 +352,31 @@ function Capabilities() {
 
 function Process() {
   const steps = [
-    { n: "01", t: "Consult", d: "We listen. Specs, materials, fabric type, deadlines, intended use — all considered before a needle moves." },
-    { n: "02", t: "Digitize", d: "Your design is engineered into a stitch file with the right density, pull compensation, and underlay." },
-    { n: "03", t: "Sample", d: "A test piece is run on identical fabric. We adjust until thread tension and finish are immaculate." },
-    { n: "04", t: "Produce", d: "Batch is run with continuous quality monitoring on calibrated multi-needle machines." },
-    { n: "05", t: "Finish", d: "Hand-trimmed, pressed, inspected. Packed for delivery or pickup with our compliments." },
+    {
+      n: "01",
+      t: "Consult",
+      d: "We listen. Specs, materials, fabric type, deadlines, intended use - all considered before a needle moves.",
+    },
+    {
+      n: "02",
+      t: "Digitize",
+      d: "Your design is engineered into a stitch file with the right density, pull compensation, and underlay.",
+    },
+    {
+      n: "03",
+      t: "Sample",
+      d: "A test piece is run on identical fabric. We adjust until thread tension and finish are immaculate.",
+    },
+    {
+      n: "04",
+      t: "Produce",
+      d: "Batch is run with continuous quality monitoring on calibrated multi-needle machines.",
+    },
+    {
+      n: "05",
+      t: "Finish",
+      d: "Hand-trimmed, pressed, inspected. Packed for delivery or pickup with our compliments.",
+    },
   ];
   return (
     <section className="bg-foreground text-background py-24 md:py-40">
@@ -377,7 +423,9 @@ function Showcase() {
       <div className="container-luxe">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div>
-            <FadeIn><SectionLabel index="05">Selected Work</SectionLabel></FadeIn>
+            <FadeIn>
+              <SectionLabel index="05">Selected Work</SectionLabel>
+            </FadeIn>
             <FadeIn delay={0.1}>
               <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[0.95] tracking-tight">
                 A few stitches we are proud of.
@@ -389,7 +437,8 @@ function Showcase() {
               to="/gallery"
               className="group inline-flex items-center gap-2 text-xs uppercase tracking-[0.22em] border-b border-foreground pb-1 hover:border-[oklch(0.7_0.09_80)] hover:text-[oklch(0.7_0.09_80)] transition-colors"
             >
-              View Full Gallery <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              View Full Gallery{" "}
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </FadeIn>
         </div>

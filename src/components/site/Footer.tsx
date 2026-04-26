@@ -23,9 +23,8 @@ export function Footer() {
               Crafted with patience. Stitched with intent.
             </h3>
             <p className="mt-8 text-background/60 max-w-md leading-relaxed">
-              Embroidery atelier and machine operation academy based in Lagos —
-              serving discerning brands, designers, and individuals who value
-              precision over speed.
+              Embroidery atelier and machine operation academy based in Lagos - serving discerning
+              brands, designers, and individuals who value precision over speed.
             </p>
           </div>
 
@@ -54,9 +53,7 @@ export function Footer() {
           </div>
 
           <div className="lg:col-span-3">
-            <p className="text-[10px] tracking-[0.3em] uppercase text-background/50 mb-6">
-              Visit
-            </p>
+            <p className="text-[10px] tracking-[0.3em] uppercase text-background/50 mb-6">Visit</p>
             <ul className="space-y-4 text-sm text-background/80">
               <li className="flex gap-3">
                 <MapPin className="h-4 w-4 mt-0.5 shrink-0 text-[oklch(0.85_0.08_85)]" />
@@ -68,7 +65,7 @@ export function Footer() {
               </li>
               <li className="flex gap-3">
                 <Clock className="h-4 w-4 mt-0.5 shrink-0 text-[oklch(0.85_0.08_85)]" />
-                <span>Mon — Sat · 8:00 — 19:00</span>
+                <span>Mon - Sat · 8:00 - 19:00</span>
               </li>
               <li className="flex gap-3">
                 <Phone className="h-4 w-4 mt-0.5 shrink-0 text-[oklch(0.85_0.08_85)]" />
@@ -92,7 +89,9 @@ export function Footer() {
         </div>
 
         <div className="mt-20 pt-8 border-t border-background/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-background/50">
-          <p>© {new Date().getFullYear()} Kenavid Monogram · Founded by Victor Atoyebi, est. 2025.</p>
+          <p>
+            © {new Date().getFullYear()} Kenavid Monogram · Founded by Victor Atoyebi, est. 2025.
+          </p>
           <div className="flex items-center gap-6">
             <a
               href="https://instagram.com"
