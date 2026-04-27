@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://monogramempire.com/sitemap.xml
+Sitemap: https://kenavidmonogram.vercel.app/sitemap.xml
