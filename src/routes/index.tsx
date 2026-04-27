@@ -8,6 +8,12 @@ import m7 from "@/assets/m-7.jpg";
 import m1 from "@/assets/m-1.jpg";
 import m24 from "@/assets/m-24.jpg";
 import m21 from "@/assets/m-21.jpg";
+import clientStars from "@/assets/client-machine-stars.jpg";
+import clientBasket from "@/assets/client-machine-basket.jpg";
+import atelierOperator from "@/assets/atelier-operator.jpg";
+import atelierBasketWide from "@/assets/atelier-basket-wide.jpg";
+import atelierStarsWide from "@/assets/atelier-stars-wide.jpg";
+import { AutoVideo } from "@/components/site/AutoVideo";
 import { FadeIn } from "@/components/site/FadeIn";
 import { StaggerText } from "@/components/site/StaggerText";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
@@ -20,13 +26,13 @@ import { ArrowUpRight } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Kenavid Monogram - Premium Embroidery At Its Finest | Lagos" },
+      { title: "Kenavid Monogram — Premium Embroidery At Its Finest | Lagos" },
       {
         name: "description",
         content:
           "Premium monogram embroidery and machine operation training in Lagos. Precision craftsmanship for brands, designers, and individuals.",
       },
-      { property: "og:title", content: "Kenavid Monogram - Embroidery At Its Finest" },
+      { property: "og:title", content: "Kenavid Monogram — Embroidery At Its Finest" },
       {
         property: "og:description",
         content:
@@ -55,6 +61,7 @@ function Home() {
       <About />
       <TheSplit />
       <Capabilities />
+      <Atelier />
       <Process />
       <Showcase />
       <CTA />
@@ -85,7 +92,7 @@ function Hero() {
         <StaggerText
           as="h1"
           text="Embroidery At Its Finest."
-          className="font-display text-[12vw] md:text-[9vw] lg:text-[8vw] leading-[0.92] tracking-[-0.04em] text-background max-w-[14ch]"
+          className="font-display text-[14vw] md:text-[10vw] lg:text-[9vw] leading-[0.92] tracking-[-0.04em] text-background max-w-[14ch]"
         />
 
         <div className="mt-10 grid md:grid-cols-2 gap-8 md:gap-16 max-w-5xl">
@@ -95,7 +102,7 @@ function Hero() {
             transition={{ delay: 1.4, duration: 0.9 }}
             className="text-base md:text-lg text-background/80 leading-relaxed max-w-md"
           >
-            Precision-crafted premium monogram designs and expert machine operation training - built
+            Precision-crafted premium monogram designs and expert machine operation training — built
             for brands, designers, and individuals who demand more than ordinary stitching.
           </motion.p>
           <motion.div
@@ -131,7 +138,7 @@ function Hero() {
             ["500+", "Pieces Stitched"],
             ["120", "Brands Served"],
             ["40+", "Trained Operators"],
-            ["8 Years", "Combined Craft"],
+            ["1 Year", "Combined Craft"],
           ].map(([k, v]) => (
             <div key={v}>
               <p className="font-display text-3xl md:text-4xl">{k}</p>
@@ -146,7 +153,7 @@ function Hero() {
 
 function About() {
   return (
-    <section className="py-16 md:py-30">
+    <section className="py-16 md:py-24">
       <div className="container-luxe grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
         <FadeIn className="lg:col-span-5">
           <div className="relative">
@@ -173,7 +180,7 @@ function About() {
           <FadeIn delay={0.2}>
             <p className="mt-8 text-lg text-foreground/70 leading-relaxed max-w-2xl">
               Founded in 2025 by <strong className="text-foreground">Victor Atoyebi</strong>,
-              Kenavid Monogram - Monogram Empire - was born from a refusal to accept average. Every
+              Kenavid Monogram — Monogram Empire — was born from a refusal to accept average. Every
               stitch placed in our workshop is the product of patient calibration, premium
               materials, and a near-obsessive respect for the finished piece.
             </p>
@@ -181,7 +188,7 @@ function About() {
           <FadeIn delay={0.3}>
             <p className="mt-6 text-base text-foreground/60 leading-relaxed max-w-2xl">
               We serve fashion houses, corporate clients, hospitality groups, wedding planners, and
-              discerning individuals - and we train the next generation of operators through our
+              discerning individuals — and we train the next generation of operators through our
               hands-on academy.
             </p>
           </FadeIn>
@@ -226,7 +233,7 @@ function TheSplit() {
   ] as const;
 
   return (
-    <section className="bg-[var(--pearl)] py-16 md:py-30">
+    <section className="bg-[var(--pearl)] py-16 md:py-24">
       <div className="container-luxe">
         <div className="max-w-3xl">
           <FadeIn>
@@ -277,7 +284,7 @@ function Capabilities() {
     {
       n: "01",
       t: "Custom Monograms",
-      d: "Cursive, serif, modern, heraldic - designed and stitched to your exact specification.",
+      d: "Cursive, serif, modern, heraldic — designed and stitched to your exact specification.",
     },
     {
       n: "02",
@@ -287,7 +294,7 @@ function Capabilities() {
     {
       n: "03",
       t: "Bulk Production",
-      d: "Uniforms, hospitality linens, corporate apparel - produced at scale without losing detail.",
+      d: "Uniforms, hospitality linens, corporate apparel — produced at scale without losing detail.",
     },
     {
       n: "04",
@@ -306,7 +313,7 @@ function Capabilities() {
     },
   ];
   return (
-    <section className="py-16 md:py-30">
+    <section className="py-16 md:py-24">
       <div className="container-luxe">
         <div className="grid lg:grid-cols-12 gap-10 mb-16">
           <div className="lg:col-span-5">
@@ -355,7 +362,7 @@ function Process() {
     {
       n: "01",
       t: "Consult",
-      d: "We listen. Specs, materials, fabric type, deadlines, intended use - all considered before a needle moves.",
+      d: "We listen. Specs, materials, fabric type, deadlines, intended use — all considered before a needle moves.",
     },
     {
       n: "02",
@@ -379,7 +386,7 @@ function Process() {
     },
   ];
   return (
-    <section className="bg-foreground text-background py-16 md:py-30">
+    <section className="bg-foreground text-background py-16 md:py-24">
       <div className="container-luxe">
         <div className="max-w-3xl mb-20">
           <FadeIn>
@@ -419,7 +426,7 @@ function Showcase() {
     { src: m21, alt: "Hands at the hoop", ratio: "tall" as const },
   ];
   return (
-    <section className="py-16 md:py-30">
+    <section className="py-16 md:py-24">
       <div className="container-luxe">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div>
@@ -457,12 +464,12 @@ function Showcase() {
 function CTA() {
   return (
     <section className="bg-[var(--pearl)]">
-      <div className="container-luxe py-16 md:py-30 text-center">
+      <div className="container-luxe py-16 md:py-24 text-center">
         <FadeIn>
           <SectionLabel index="06">⊹</SectionLabel>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <h2 className="mt-6 font-display text-4xl md:text-6xl lg:text-7xl leading-[0.92] tracking-tight max-w-5xl mx-auto text-balance">
+          <h2 className="mt-6 font-display text-5xl md:text-7xl lg:text-8xl leading-[0.92] tracking-tight max-w-5xl mx-auto text-balance">
             Have a piece that deserves more than ordinary?
           </h2>
         </FadeIn>
@@ -476,6 +483,95 @@ function CTA() {
             </WhatsAppButton>
           </div>
         </FadeIn>
+      </div>
+    </section>
+  );
+}
+
+function Atelier() {
+  return (
+    <section className="bg-[var(--pearl)] py-16 md:py-24 overflow-hidden">
+      <div className="container-luxe">
+        <div className="grid lg:grid-cols-12 gap-10 mb-14 items-end">
+          <div className="lg:col-span-7">
+            <FadeIn>
+              <SectionLabel index="◐">Inside the Atelier</SectionLabel>
+            </FadeIn>
+            <FadeIn delay={0.1}>
+              <h2 className="mt-6 font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight text-balance">
+                Calibrated machines. Disciplined hands.
+              </h2>
+            </FadeIn>
+          </div>
+          <FadeIn delay={0.2} className="lg:col-span-5">
+            <p className="text-foreground/70 text-base md:text-lg leading-relaxed">
+              Our multi-needle industrial heads run at exacting tension on every fabric — from
+              velvet and leather to fine linen — producing repeatable detail at scale.
+            </p>
+          </FadeIn>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-5">
+          <FadeIn className="md:col-span-8">
+            <AutoVideo
+              src="/media/atelier-wide.mp4"
+              poster="/media/atelier-wide-poster.jpg"
+              ratio="wide"
+              ariaLabel="Industrial embroidery machine stitching at the Kenavid Monogram atelier"
+            />
+          </FadeIn>
+          <FadeIn delay={0.1} className="md:col-span-4">
+            <AutoVideo
+              src="/media/atelier-portrait.mp4"
+              poster="/media/atelier-portrait-poster.jpg"
+              ratio="portrait"
+              ariaLabel="Close up of needle work on a custom monogram piece"
+            />
+          </FadeIn>
+          <FadeIn delay={0.12} className="md:col-span-7">
+            <HoverImage
+              src={atelierBasketWide}
+              alt="Branded Kenavid Monogram machine stitching a geometric pattern on canvas"
+              ratio="landscape"
+            />
+          </FadeIn>
+          <FadeIn delay={0.18} className="md:col-span-5">
+            <HoverImage
+              src={atelierOperator}
+              alt="Kenavid Monogram operator setting up a multi-needle embroidery machine"
+              ratio="landscape"
+            />
+          </FadeIn>
+          <FadeIn delay={0.2} className="md:col-span-6">
+            <AutoVideo
+              src="/media/production-wide.mp4"
+              poster="/media/production-wide-poster.jpg"
+              ratio="wide"
+              ariaLabel="Live production run of a custom monogram on the Kenavid Monogram machine"
+            />
+          </FadeIn>
+          <FadeIn delay={0.24} className="md:col-span-6">
+            <HoverImage
+              src={atelierStarsWide}
+              alt="Branded Kenavid Monogram machine stitching gold star pattern on brown leather"
+              ratio="landscape"
+            />
+          </FadeIn>
+          <FadeIn delay={0.28} className="md:col-span-6">
+            <HoverImage
+              src={clientBasket}
+              alt="Kenavid Monogram machine detail — basket weave on linen"
+              ratio="landscape"
+            />
+          </FadeIn>
+          <FadeIn delay={0.3} className="md:col-span-6">
+            <HoverImage
+              src={clientStars}
+              alt="Kenavid Monogram machine detail — star motif on brown leather"
+              ratio="landscape"
+            />
+          </FadeIn>
+        </div>
       </div>
     </section>
   );

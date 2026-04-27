@@ -74,6 +74,12 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex gap-3">
+                <Phone className="h-4 w-4 mt-0.5 shrink-0 text-[oklch(0.85_0.08_85)]" />
+                <a href="tel:+2347049852224" className="hover:text-background">
+                  +234 704 985 2224
+                </a>
+              </li>
+              <li className="flex gap-3">
                 <MessageCircle className="h-4 w-4 mt-0.5 shrink-0 text-[oklch(0.85_0.08_85)]" />
                 <a
                   href={waLink(waMessages.general)}
@@ -88,7 +94,7 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-20 pt-8 border-t border-background/10 flex flex-col md:flex-row md:items-center md:justify-between gap-4 text-xs text-background/50">
+        <div className="mt-20 pt-8 border-t border-background/10 flex flex-col md:flex-row md:items-center justify-center md:justify-between gap-4 text-xs text-background/50">
           <p>
             © {new Date().getFullYear()} Kenavid Monogram · Founded by Victor Atoyebi, est. 2025.
           </p>

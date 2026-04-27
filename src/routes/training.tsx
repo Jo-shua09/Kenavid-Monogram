@@ -4,9 +4,11 @@ import { StaggerText } from "@/components/site/StaggerText";
 import { SectionLabel } from "@/components/site/SectionLabel";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
 import { HoverImage } from "@/components/site/HoverImage";
+import { AutoVideo } from "@/components/site/AutoVideo";
 import { waMessages } from "@/lib/whatsapp";
 import t1 from "@/assets/training-1.jpg";
 import t2 from "@/assets/training-2.jpg";
+import trainee from "@/assets/atelier-trainee.jpg";
 import m17 from "@/assets/m-17.jpg";
 import m22 from "@/assets/m-22.jpg";
 import { Check } from "lucide-react";
@@ -14,13 +16,13 @@ import { Check } from "lucide-react";
 export const Route = createFileRoute("/training")({
   head: () => ({
     meta: [
-      { title: "Machine Operation Academy - Kenavid Monogram" },
+      { title: "Machine Operation Academy — Kenavid Monogram" },
       {
         name: "description",
         content:
           "Hands-on monogram machine operation training in Lagos. Learn industrial multi-needle embroidery from day one.",
       },
-      { property: "og:title", content: "Machine Operation Academy - Kenavid Monogram" },
+      { property: "og:title", content: "Machine Operation Academy — Kenavid Monogram" },
       {
         property: "og:description",
         content:
@@ -39,10 +41,45 @@ function Training() {
       <Hero />
       <Intro />
       <Curriculum />
+      <LiveLab />
       <Outcomes />
       <Logistics />
       <Enroll />
     </>
+  );
+}
+
+function LiveLab() {
+  return (
+    <section className="container-luxe py-16 md:py-24">
+      <div className="grid lg:grid-cols-12 gap-10 mb-12 items-end">
+        <FadeIn className="lg:col-span-7">
+          <SectionLabel index="◐">Inside the Training Floor</SectionLabel>
+          <h2 className="mt-6 font-display text-4xl md:text-6xl leading-[0.95] tracking-tight">
+            Hands on the machine from day one.
+          </h2>
+        </FadeIn>
+        <FadeIn delay={0.15} className="lg:col-span-5">
+          <p className="text-foreground/70 text-lg leading-relaxed">
+            Watch our trainees and operators at work — every minute on the floor is supervised
+            production, not theory.
+          </p>
+        </FadeIn>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-5">
+        <FadeIn className="md:col-span-8">
+          <AutoVideo
+            src="/media/training-wide.mp4"
+            poster="/media/training-wide-poster.jpg"
+            ratio="wide"
+            ariaLabel="Trainee running a live monogram production job"
+          />
+        </FadeIn>
+        <FadeIn delay={0.1} className="md:col-span-4">
+          <HoverImage src={t2} alt="Embroidery training in progress" ratio="portrait" />
+        </FadeIn>
+      </div>
+    </section>
   );
 }
 
@@ -58,12 +95,12 @@ function Hero() {
         <StaggerText
           as="h1"
           text="Master the machine. Own the craft."
-          className="mt-6 font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight max-w-5xl"
+          className="mt-6 font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight max-w-5xl"
         />
         <FadeIn delay={0.6}>
           <p className="mt-8 text-lg text-background/70 max-w-2xl leading-relaxed">
             A hands-on, cohort-based training program where you learn to operate, calibrate,
-            troubleshoot, and produce on industrial multi-needle embroidery machines - taught by
+            troubleshoot, and produce on industrial multi-needle embroidery machines — taught by
             working professionals.
           </p>
         </FadeIn>
@@ -92,9 +129,21 @@ function Hero() {
 
 function Intro() {
   return (
-    <section className="py-24 md:py-32 container-luxe grid lg:grid-cols-12 gap-12 items-start">
-      <FadeIn className="lg:col-span-5">
-        <HoverImage src={t1} alt="Student operating embroidery machine" ratio="tall" />
+    <section className="py-16 md:py-24 container-luxe grid lg:grid-cols-12 gap-12 items-start">
+      <FadeIn className="lg:col-span-5 grid grid-cols-2 gap-3">
+        <HoverImage
+          src={trainee}
+          alt="Trainee operating a Kenavid Monogram embroidery machine"
+          ratio="tall"
+          className="col-span-2"
+        />
+        <HoverImage src={t1} alt="Student threading a multi-needle head" ratio="square" />
+        <AutoVideo
+          src="/media/training-portrait.mp4"
+          poster="/media/training-portrait-poster.jpg"
+          ratio="square"
+          ariaLabel="Hands-on training session with a Kenavid Monogram machine"
+        />
       </FadeIn>
       <div className="lg:col-span-7 lg:pt-16">
         <FadeIn>
@@ -109,7 +158,7 @@ function Intro() {
           <p className="mt-8 text-lg text-foreground/70 leading-relaxed max-w-2xl">
             Our program is engineered for one thing: making you self-sufficient on a multi-needle
             embroidery machine. From the first session you are touching the machine, threading
-            needles, hooping fabric, and running real production - under the watch of an experienced
+            needles, hooping fabric, and running real production — under the watch of an experienced
             operator.
           </p>
         </FadeIn>
@@ -192,7 +241,7 @@ function Curriculum() {
     {
       n: "Week 06",
       t: "Business & Certification",
-      d: "Pricing, client briefing, packaging, and your final certification piece - produced start-to-finish unsupervised.",
+      d: "Pricing, client briefing, packaging, and your final certification piece — produced start-to-finish unsupervised.",
       pts: [
         "Pricing your work",
         "Client communication",
@@ -203,7 +252,7 @@ function Curriculum() {
   ];
 
   return (
-    <section className="bg-[var(--pearl)] py-24 md:py-32">
+    <section className="bg-[var(--pearl)] py-16 md:py-24">
       <div className="container-luxe">
         <div className="grid lg:grid-cols-12 gap-10 mb-16">
           <FadeIn className="lg:col-span-5">
@@ -214,7 +263,7 @@ function Curriculum() {
           </FadeIn>
           <FadeIn delay={0.15} className="lg:col-span-6 lg:col-start-7">
             <p className="text-foreground/70 text-lg leading-relaxed">
-              Every module is taught on the same equipment used in our live production studio -
+              Every module is taught on the same equipment used in our live production studio —
               Kenavid Monogram industrial multi-needle machines. You will leave knowing the machine
               inside-out.
             </p>
@@ -255,7 +304,7 @@ function Curriculum() {
 
 function Outcomes() {
   return (
-    <section className="container-luxe py-24 md:py-32 grid lg:grid-cols-2 gap-16 items-center">
+    <section className="container-luxe py-16 md:py-24 grid lg:grid-cols-2 gap-16 items-center">
       <div>
         <FadeIn>
           <SectionLabel index="03">What You Leave With</SectionLabel>
@@ -293,11 +342,11 @@ function Outcomes() {
 
 function Logistics() {
   return (
-    <section className="bg-foreground text-background py-24 md:py-32">
+    <section className="bg-foreground text-background py-16 md:py-24">
       <div className="container-luxe">
         <FadeIn>
           <p className="text-[10px] tracking-[0.32em] uppercase text-background/60">
-            ⊹ 04 - Logistics
+            ⊹ 04 — Logistics
           </p>
         </FadeIn>
         <FadeIn delay={0.1}>
@@ -308,7 +357,7 @@ function Logistics() {
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-background/10">
           {[
             ["Format", "In-person, hands-on"],
-            ["Schedule", "Mon - Fri, 9am - 2pm"],
+            ["Schedule", "Mon — Fri, 9am — 2pm"],
             ["Location", "Egbeda, Lagos"],
             ["Class Size", "Maximum 6 students"],
             ["Equipment", "Provided on-site"],
@@ -351,7 +400,7 @@ function Logistics() {
 
 function Enroll() {
   return (
-    <section className="relative py-32 md:py-44 overflow-hidden">
+    <section className="relative py-16 md:py-24 overflow-hidden">
       <img src={m17} alt="" className="absolute inset-0 h-full w-full object-cover opacity-15" />
       <div className="container-luxe relative text-center">
         <FadeIn>
@@ -360,13 +409,13 @@ function Enroll() {
           </p>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <h2 className="mt-6 font-display text-4xl md:text-6xl lg:text-7xl leading-[0.92] tracking-tight max-w-5xl mx-auto text-balance">
+          <h2 className="mt-6 font-display text-5xl md:text-7xl lg:text-8xl leading-[0.92] tracking-tight max-w-5xl mx-auto text-balance">
             The next cohort starts soon.
           </h2>
         </FadeIn>
         <FadeIn delay={0.2}>
           <p className="mt-8 text-foreground/65 max-w-xl mx-auto text-lg">
-            Class sizes are capped at six. Reserve your seat by sending us a quick WhatsApp - we'll
+            Class sizes are capped at six. Reserve your seat by sending us a quick WhatsApp — we'll
             respond within working hours.
           </p>
         </FadeIn>

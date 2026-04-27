@@ -97,7 +97,7 @@ function Services() {
     <>
       <PageHero />
 
-      <section className="container-luxe py-20 md:py-32">
+      <section className="container-luxe py-16 md:py-24">
         <div className="grid lg:grid-cols-12 gap-10 mb-16">
           <FadeIn className="lg:col-span-5">
             <SectionLabel index="01">Production</SectionLabel>
@@ -157,7 +157,7 @@ function Services() {
         </div>
       </section>
 
-      <section className="bg-[var(--pearl)] py-24 md:py-32">
+      <section className="bg-[var(--pearl)] py-16 md:py-24">
         <div className="container-luxe grid lg:grid-cols-2 gap-16 items-center">
           <FadeIn>
             <HoverImage src={m11} alt="Premium thread inventory" ratio="square" />
@@ -199,7 +199,7 @@ function Services() {
         </div>
       </section>
 
-      <section className="container-luxe py-24 md:py-32">
+      <section className="container-luxe py-16 md:py-24">
         <FadeIn>
           <SectionLabel index="03">Pricing Approach</SectionLabel>
         </FadeIn>
@@ -245,7 +245,7 @@ function Services() {
         </div>
       </section>
 
-      <section className="bg-foreground text-background py-24 md:py-32">
+      <section className="bg-foreground text-background py-16 md:py-24">
         <div className="container-luxe text-center">
           <FadeIn>
             <p className="text-[10px] tracking-[0.32em] uppercase text-background/60">

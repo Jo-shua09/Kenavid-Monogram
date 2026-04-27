@@ -61,6 +61,12 @@ function Contact() {
             { Icon: Clock, label: "Working Hours", value: "Monday - Saturday\n8:00 AM - 7:00 PM" },
             { Icon: Phone, label: "Phone", value: "+234 803 459 3315", href: "tel:+2348034593315" },
             {
+              Icon: Phone,
+              label: "Phone (Alt)",
+              value: "+234 704 985 2224",
+              href: "tel:+2347049852224",
+            },
+            {
               Icon: MessageCircle,
               label: "WhatsApp",
               value: "Tap to start a chat",

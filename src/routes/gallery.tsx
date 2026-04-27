@@ -117,7 +117,7 @@ function Gallery() {
         </div>
       </section>
 
-      <section className="bg-[var(--pearl)] py-24 md:py-32">
+      <section className="bg-[var(--pearl)] py-16 md:py-24">
         <div className="container-luxe text-center">
           <FadeIn>
             <SectionLabel index="⊹">Commission a Piece</SectionLabel>
