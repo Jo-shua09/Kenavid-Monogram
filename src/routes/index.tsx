@@ -13,7 +13,6 @@ import clientBasket from "@/assets/client-machine-basket.jpg";
 import atelierOperator from "@/assets/atelier-operator.jpg";
 import atelierBasketWide from "@/assets/atelier-basket-wide.jpg";
 import atelierStarsWide from "@/assets/atelier-stars-wide.jpg";
-import { AutoVideo } from "@/components/site/AutoVideo";
 import { FadeIn } from "@/components/site/FadeIn";
 import { StaggerText } from "@/components/site/StaggerText";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
@@ -22,6 +21,7 @@ import { Marquee } from "@/components/site/Marquee";
 import { HoverImage } from "@/components/site/HoverImage";
 import { waMessages } from "@/lib/whatsapp";
 import { ArrowUpRight } from "lucide-react";
+import { AutoVideo } from "@/components/site/AutoVideo";
 
 export const Route = createFileRoute("/")({
   head: () => ({
