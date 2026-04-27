@@ -21,8 +21,8 @@ export const Route = createFileRoute("/contact")({
         property: "og:description",
         content: "Reach Kenavid Monogram in Lagos. WhatsApp, phone, and atelier address.",
       },
-      { property: "og:image", content: "https://monogramempire.com/logo.png" },
-      { name: "twitter:image", content: "https://monogramempire.com/logo.png" },
+      { property: "og:image", content: "https://kenavidmonogram.vercel.app/logo.png" },
+      { name: "twitter:image", content: "https://kenavidmonogram.vercel.app/logo.png" },
     ],
   }),
   component: Contact,
@@ -85,16 +85,16 @@ function Contact() {
               href: "https://instagram.com/Ken.avidcouture",
             },
           ].map(({ Icon, label, value, href }, i) => (
-            <FadeIn key={label} delay={(i % 2) * 0.08}>
+            <FadeIn key={label} delay={(i % 2) * 0.08} className="min-w-0">
               <a
                 href={href ?? "#"}
                 target={href?.startsWith("http") ? "_blank" : undefined}
                 rel="noopener noreferrer"
-                className="bg-background block p-8 md:p-10 h-full group hover:bg-foreground hover:text-background transition-colors duration-500"
+                className="bg-background block p-8 md:p-10 h-full group hover:bg-foreground hover:text-background transition-colors duration-500 overflow-hidden"
               >
                 <Icon className="h-5 w-5 text-[oklch(0.7_0.09_80)] group-hover:text-[oklch(0.85_0.08_85)] transition-colors" />
                 <p className="mt-6 text-[10px] uppercase tracking-[0.3em] opacity-60">{label}</p>
-                <p className="mt-3 font-display text-xl md:text-2xl leading-tight whitespace-pre-line">
+                <p className="mt-3 font-display text-xl md:text-2xl leading-tight whitespace-pre-line break-words">
                   {value}
                 </p>
               </a>

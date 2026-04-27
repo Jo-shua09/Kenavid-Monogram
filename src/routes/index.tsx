@@ -26,20 +26,20 @@ import { ArrowUpRight } from "lucide-react";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Kenavid Monogram — Premium Embroidery At Its Finest | Lagos" },
+      { title: "Kenavid Monogram - Premium Embroidery At Its Finest | Lagos" },
       {
         name: "description",
         content:
           "Premium monogram embroidery and machine operation training in Lagos. Precision craftsmanship for brands, designers, and individuals.",
       },
-      { property: "og:title", content: "Kenavid Monogram — Embroidery At Its Finest" },
+      { property: "og:title", content: "Kenavid Monogram - Embroidery At Its Finest" },
       {
         property: "og:description",
         content:
           "Precision-crafted premium monogram designs and expert machine operation training.",
       },
-      { property: "og:image", content: "https://monogramempire.com/logo.png" },
-      { name: "twitter:image", content: "https://monogramempire.com/logo.png" },
+      { property: "og:image", content: "https://kenavidmonogram.vercel.app/logo.png" },
+      { name: "twitter:image", content: "https://kenavidmonogram.vercel.app/logo.png" },
     ],
   }),
   component: Home,
@@ -102,7 +102,7 @@ function Hero() {
             transition={{ delay: 1.4, duration: 0.9 }}
             className="text-base md:text-lg text-background/80 leading-relaxed max-w-md"
           >
-            Precision-crafted premium monogram designs and expert machine operation training — built
+            Precision-crafted premium monogram designs and expert machine operation training - built
             for brands, designers, and individuals who demand more than ordinary stitching.
           </motion.p>
           <motion.div
@@ -180,7 +180,7 @@ function About() {
           <FadeIn delay={0.2}>
             <p className="mt-8 text-lg text-foreground/70 leading-relaxed max-w-2xl">
               Founded in 2025 by <strong className="text-foreground">Victor Atoyebi</strong>,
-              Kenavid Monogram — Monogram Empire — was born from a refusal to accept average. Every
+              Kenavid Monogram - Monogram Empire - was born from a refusal to accept average. Every
               stitch placed in our workshop is the product of patient calibration, premium
               materials, and a near-obsessive respect for the finished piece.
             </p>
@@ -188,7 +188,7 @@ function About() {
           <FadeIn delay={0.3}>
             <p className="mt-6 text-base text-foreground/60 leading-relaxed max-w-2xl">
               We serve fashion houses, corporate clients, hospitality groups, wedding planners, and
-              discerning individuals — and we train the next generation of operators through our
+              discerning individuals - and we train the next generation of operators through our
               hands-on academy.
             </p>
           </FadeIn>
@@ -284,7 +284,7 @@ function Capabilities() {
     {
       n: "01",
       t: "Custom Monograms",
-      d: "Cursive, serif, modern, heraldic — designed and stitched to your exact specification.",
+      d: "Cursive, serif, modern, heraldic - designed and stitched to your exact specification.",
     },
     {
       n: "02",
@@ -294,7 +294,7 @@ function Capabilities() {
     {
       n: "03",
       t: "Bulk Production",
-      d: "Uniforms, hospitality linens, corporate apparel — produced at scale without losing detail.",
+      d: "Uniforms, hospitality linens, corporate apparel - produced at scale without losing detail.",
     },
     {
       n: "04",
@@ -362,7 +362,7 @@ function Process() {
     {
       n: "01",
       t: "Consult",
-      d: "We listen. Specs, materials, fabric type, deadlines, intended use — all considered before a needle moves.",
+      d: "We listen. Specs, materials, fabric type, deadlines, intended use - all considered before a needle moves.",
     },
     {
       n: "02",
@@ -505,8 +505,8 @@ function Atelier() {
           </div>
           <FadeIn delay={0.2} className="lg:col-span-5">
             <p className="text-foreground/70 text-base md:text-lg leading-relaxed">
-              Our multi-needle industrial heads run at exacting tension on every fabric — from
-              velvet and leather to fine linen — producing repeatable detail at scale.
+              Our multi-needle industrial heads run at exacting tension on every fabric - from
+              velvet and leather to fine linen - producing repeatable detail at scale.
             </p>
           </FadeIn>
         </div>
@@ -560,14 +560,14 @@ function Atelier() {
           <FadeIn delay={0.28} className="md:col-span-6">
             <HoverImage
               src={clientBasket}
-              alt="Kenavid Monogram machine detail — basket weave on linen"
+              alt="Kenavid Monogram machine detail - basket weave on linen"
               ratio="landscape"
             />
           </FadeIn>
           <FadeIn delay={0.3} className="md:col-span-6">
             <HoverImage
               src={clientStars}
-              alt="Kenavid Monogram machine detail — star motif on brown leather"
+              alt="Kenavid Monogram machine detail - star motif on brown leather"
               ratio="landscape"
             />
           </FadeIn>

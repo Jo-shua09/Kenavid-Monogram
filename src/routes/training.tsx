@@ -16,20 +16,20 @@ import { Check } from "lucide-react";
 export const Route = createFileRoute("/training")({
   head: () => ({
     meta: [
-      { title: "Machine Operation Academy — Kenavid Monogram" },
+      { title: "Machine Operation Academy - Kenavid Monogram" },
       {
         name: "description",
         content:
           "Hands-on monogram machine operation training in Lagos. Learn industrial multi-needle embroidery from day one.",
       },
-      { property: "og:title", content: "Machine Operation Academy — Kenavid Monogram" },
+      { property: "og:title", content: "Machine Operation Academy - Kenavid Monogram" },
       {
         property: "og:description",
         content:
           "Six-week hands-on training to master industrial monogram embroidery machines. Cohort-based, certified.",
       },
-      { property: "og:image", content: "https://monogramempire.com/logo.png" },
-      { name: "twitter:image", content: "https://monogramempire.com/logo.png" },
+      { property: "og:image", content: "https://kenavidmonogram.vercel.app/logo.png" },
+      { name: "twitter:image", content: "https://kenavidmonogram.vercel.app/logo.png" },
     ],
   }),
   component: Training,
@@ -61,7 +61,7 @@ function LiveLab() {
         </FadeIn>
         <FadeIn delay={0.15} className="lg:col-span-5">
           <p className="text-foreground/70 text-lg leading-relaxed">
-            Watch our trainees and operators at work — every minute on the floor is supervised
+            Watch our trainees and operators at work - every minute on the floor is supervised
             production, not theory.
           </p>
         </FadeIn>
@@ -100,7 +100,7 @@ function Hero() {
         <FadeIn delay={0.6}>
           <p className="mt-8 text-lg text-background/70 max-w-2xl leading-relaxed">
             A hands-on, cohort-based training program where you learn to operate, calibrate,
-            troubleshoot, and produce on industrial multi-needle embroidery machines — taught by
+            troubleshoot, and produce on industrial multi-needle embroidery machines - taught by
             working professionals.
           </p>
         </FadeIn>
@@ -158,7 +158,7 @@ function Intro() {
           <p className="mt-8 text-lg text-foreground/70 leading-relaxed max-w-2xl">
             Our program is engineered for one thing: making you self-sufficient on a multi-needle
             embroidery machine. From the first session you are touching the machine, threading
-            needles, hooping fabric, and running real production — under the watch of an experienced
+            needles, hooping fabric, and running real production - under the watch of an experienced
             operator.
           </p>
         </FadeIn>
@@ -241,7 +241,7 @@ function Curriculum() {
     {
       n: "Week 06",
       t: "Business & Certification",
-      d: "Pricing, client briefing, packaging, and your final certification piece — produced start-to-finish unsupervised.",
+      d: "Pricing, client briefing, packaging, and your final certification piece - produced start-to-finish unsupervised.",
       pts: [
         "Pricing your work",
         "Client communication",
@@ -263,7 +263,7 @@ function Curriculum() {
           </FadeIn>
           <FadeIn delay={0.15} className="lg:col-span-6 lg:col-start-7">
             <p className="text-foreground/70 text-lg leading-relaxed">
-              Every module is taught on the same equipment used in our live production studio —
+              Every module is taught on the same equipment used in our live production studio -
               Kenavid Monogram industrial multi-needle machines. You will leave knowing the machine
               inside-out.
             </p>
@@ -346,7 +346,7 @@ function Logistics() {
       <div className="container-luxe">
         <FadeIn>
           <p className="text-[10px] tracking-[0.32em] uppercase text-background/60">
-            ⊹ 04 — Logistics
+            ⊹ 04 - Logistics
           </p>
         </FadeIn>
         <FadeIn delay={0.1}>
@@ -357,7 +357,7 @@ function Logistics() {
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-background/10">
           {[
             ["Format", "In-person, hands-on"],
-            ["Schedule", "Mon — Fri, 9am — 2pm"],
+            ["Schedule", "Mon - Fri, 9am - 2pm"],
             ["Location", "Egbeda, Lagos"],
             ["Class Size", "Maximum 6 students"],
             ["Equipment", "Provided on-site"],
@@ -415,7 +415,7 @@ function Enroll() {
         </FadeIn>
         <FadeIn delay={0.2}>
           <p className="mt-8 text-foreground/65 max-w-xl mx-auto text-lg">
-            Class sizes are capped at six. Reserve your seat by sending us a quick WhatsApp — we'll
+            Class sizes are capped at six. Reserve your seat by sending us a quick WhatsApp - we'll
             respond within working hours.
           </p>
         </FadeIn>

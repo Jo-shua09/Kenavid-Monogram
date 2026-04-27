@@ -1,4 +1,4 @@
-# Kenavid Monogram — Premium Embroidery Atelier
+# Kenavid Monogram - Premium Embroidery Atelier
 
 Premium monogram embroidery production and machine operation training academy based in Lagos, Nigeria. Founded by Victor Atoyebi.
 

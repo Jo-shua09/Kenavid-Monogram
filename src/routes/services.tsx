@@ -30,8 +30,8 @@ export const Route = createFileRoute("/services")({
         content:
           "Premium monogramming, digitization, and bulk embroidery production for fashion, hospitality, and corporate clients.",
       },
-      { property: "og:image", content: "https://monogramempire.com/logo.png" },
-      { name: "twitter:image", content: "https://monogramempire.com/logo.png" },
+      { property: "og:image", content: "https://kenavidmonogram.vercel.app/logo.png" },
+      { name: "twitter:image", content: "https://kenavidmonogram.vercel.app/logo.png" },
     ],
   }),
   component: Services,
