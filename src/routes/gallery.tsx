@@ -49,7 +49,7 @@ function Gallery() {
         <StaggerText
           as="h1"
           text="Selected work. Honest stitches."
-          className="mt-6 font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight max-w-5xl"
+          className="mt-6 font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight max-w-5xl"
         />
         <FadeIn delay={0.6}>
           <p className="mt-8 text-lg text-foreground/65 max-w-2xl leading-relaxed">

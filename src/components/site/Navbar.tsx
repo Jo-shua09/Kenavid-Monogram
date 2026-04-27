@@ -149,7 +149,7 @@ export function Navbar() {
             style={{ height: "100dvh" }}
           >
             <div className="container-luxe min-h-full pt-24 pb-12 flex flex-col">
-              <nav className="flex-1 flex flex-col justify-center gap-5 sm:gap-6">
+              <nav className="flex-1 flex flex-col justify-center gap-8 sm:gap-10">
                 {links.map((l, i) => (
                   <motion.div
                     key={l.to}
@@ -160,7 +160,7 @@ export function Navbar() {
                     <Link
                       to={l.to}
                       activeOptions={{ exact: l.to === "/" }}
-                      className="block font-display text-4xl sm:text-5xl tracking-tight text-background hover:text-[oklch(0.85_0.08_85)] transition-colors break-words"
+                      className="block font-display text-3xl sm:text-4xl tracking-tight text-background hover:text-[oklch(0.85_0.08_85)] transition-colors break-words"
                       activeProps={{ className: "text-[oklch(0.85_0.08_85)]" }}
                     >
                       {l.label}

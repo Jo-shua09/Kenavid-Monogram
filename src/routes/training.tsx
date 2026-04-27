@@ -58,7 +58,7 @@ function Hero() {
         <StaggerText
           as="h1"
           text="Master the machine. Own the craft."
-          className="mt-6 font-display text-5xl md:text-7xl lg:text-8xl leading-[0.95] tracking-tight max-w-5xl"
+          className="mt-6 font-display text-4xl md:text-6xl lg:text-7xl leading-[0.95] tracking-tight max-w-5xl"
         />
         <FadeIn delay={0.6}>
           <p className="mt-8 text-lg text-background/70 max-w-2xl leading-relaxed">
@@ -360,7 +360,7 @@ function Enroll() {
           </p>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <h2 className="mt-6 font-display text-5xl md:text-7xl lg:text-8xl leading-[0.92] tracking-tight max-w-5xl mx-auto text-balance">
+          <h2 className="mt-6 font-display text-4xl md:text-6xl lg:text-7xl leading-[0.92] tracking-tight max-w-5xl mx-auto text-balance">
             The next cohort starts soon.
           </h2>
         </FadeIn>

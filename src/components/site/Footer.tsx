@@ -94,7 +94,7 @@ export function Footer() {
           </p>
           <div className="flex items-center gap-6">
             <a
-              href="https://instagram.com"
+              href="https://instagram.com/Ken.avidcouture"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 hover:text-background"

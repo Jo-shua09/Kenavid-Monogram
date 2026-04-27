@@ -85,7 +85,7 @@ function Hero() {
         <StaggerText
           as="h1"
           text="Embroidery At Its Finest."
-          className="font-display text-[14vw] md:text-[10vw] lg:text-[9vw] leading-[0.92] tracking-[-0.04em] text-background max-w-[14ch]"
+          className="font-display text-[12vw] md:text-[9vw] lg:text-[8vw] leading-[0.92] tracking-[-0.04em] text-background max-w-[14ch]"
         />
 
         <div className="mt-10 grid md:grid-cols-2 gap-8 md:gap-16 max-w-5xl">
@@ -146,7 +146,7 @@ function Hero() {
 
 function About() {
   return (
-    <section className="py-24 md:py-40">
+    <section className="py-16 md:py-30">
       <div className="container-luxe grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-20 items-center">
         <FadeIn className="lg:col-span-5">
           <div className="relative">
@@ -226,7 +226,7 @@ function TheSplit() {
   ] as const;
 
   return (
-    <section className="bg-[var(--pearl)] py-24 md:py-40">
+    <section className="bg-[var(--pearl)] py-16 md:py-30">
       <div className="container-luxe">
         <div className="max-w-3xl">
           <FadeIn>
@@ -306,7 +306,7 @@ function Capabilities() {
     },
   ];
   return (
-    <section className="py-24 md:py-40">
+    <section className="py-16 md:py-30">
       <div className="container-luxe">
         <div className="grid lg:grid-cols-12 gap-10 mb-16">
           <div className="lg:col-span-5">
@@ -379,7 +379,7 @@ function Process() {
     },
   ];
   return (
-    <section className="bg-foreground text-background py-24 md:py-40">
+    <section className="bg-foreground text-background py-16 md:py-30">
       <div className="container-luxe">
         <div className="max-w-3xl mb-20">
           <FadeIn>
@@ -419,7 +419,7 @@ function Showcase() {
     { src: m21, alt: "Hands at the hoop", ratio: "tall" as const },
   ];
   return (
-    <section className="py-24 md:py-40">
+    <section className="py-16 md:py-30">
       <div className="container-luxe">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14">
           <div>
@@ -457,12 +457,12 @@ function Showcase() {
 function CTA() {
   return (
     <section className="bg-[var(--pearl)]">
-      <div className="container-luxe py-24 md:py-40 text-center">
+      <div className="container-luxe py-16 md:py-30 text-center">
         <FadeIn>
           <SectionLabel index="06">⊹</SectionLabel>
         </FadeIn>
         <FadeIn delay={0.1}>
-          <h2 className="mt-6 font-display text-5xl md:text-7xl lg:text-8xl leading-[0.92] tracking-tight max-w-5xl mx-auto text-balance">
+          <h2 className="mt-6 font-display text-4xl md:text-6xl lg:text-7xl leading-[0.92] tracking-tight max-w-5xl mx-auto text-balance">
             Have a piece that deserves more than ordinary?
           </h2>
         </FadeIn>
