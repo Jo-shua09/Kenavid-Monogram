@@ -542,7 +542,7 @@ function Atelier() {
               ratio="landscape"
             />
           </FadeIn>
-          <FadeIn delay={0.2} className="md:col-span-6">
+          <FadeIn delay={0.2} className="md:col-span-12 lg:col-span-4">
             <AutoVideo
               src="/media/production-wide.mp4"
               poster="/media/production-wide-poster.jpg"
@@ -550,21 +550,14 @@ function Atelier() {
               ariaLabel="Live production run of a custom monogram on the Kenavid Monogram machine"
             />
           </FadeIn>
-          <FadeIn delay={0.24} className="md:col-span-6">
-            <HoverImage
-              src={atelierStarsWide}
-              alt="Branded Kenavid Monogram machine stitching gold star pattern on brown leather"
-              ratio="landscape"
-            />
-          </FadeIn>
-          <FadeIn delay={0.28} className="md:col-span-6">
+          <FadeIn delay={0.28} className="md:col-span-6 lg:col-span-4">
             <HoverImage
               src={clientBasket}
               alt="Kenavid Monogram machine detail - basket weave on linen"
               ratio="landscape"
             />
           </FadeIn>
-          <FadeIn delay={0.3} className="md:col-span-6">
+          <FadeIn delay={0.3} className="md:col-span-6 lg:col-span-4">
             <HoverImage
               src={clientStars}
               alt="Kenavid Monogram machine detail - star motif on brown leather"
