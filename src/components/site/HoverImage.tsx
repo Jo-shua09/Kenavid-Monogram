@@ -8,13 +8,7 @@ interface Props {
   ratio?: "portrait" | "square" | "landscape" | "tall";
 }
 
-export function HoverImage({
-  src,
-  alt,
-  className,
-  imgClassName,
-  ratio = "portrait",
-}: Props) {
+export function HoverImage({ src, alt, className, imgClassName, ratio = "portrait" }: Props) {
   const ratios = {
     portrait: "aspect-[4/5]",
     square: "aspect-square",

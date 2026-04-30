@@ -4,15 +4,10 @@ import heroPoster from "@/assets/hero-poster.jpg";
 import founderImg from "@/assets/founder.jpg";
 import splitProd from "@/assets/split-production.jpg";
 import splitAcad from "@/assets/split-academy.jpg";
-import m7 from "@/assets/m-7.jpg";
-import m1 from "@/assets/m-1.jpg";
-import m24 from "@/assets/m-24.jpg";
-import m21 from "@/assets/m-21.jpg";
 import clientStars from "@/assets/client-machine-stars.jpg";
 import clientBasket from "@/assets/client-machine-basket.jpg";
 import atelierOperator from "@/assets/atelier-operator.jpg";
 import atelierBasketWide from "@/assets/atelier-basket-wide.jpg";
-import atelierStarsWide from "@/assets/atelier-stars-wide.jpg";
 import { FadeIn } from "@/components/site/FadeIn";
 import { StaggerText } from "@/components/site/StaggerText";
 import { WhatsAppButton } from "@/components/site/WhatsAppButton";
@@ -21,7 +16,7 @@ import { Marquee } from "@/components/site/Marquee";
 import { HoverImage } from "@/components/site/HoverImage";
 import { waMessages } from "@/lib/whatsapp";
 import { ArrowUpRight } from "lucide-react";
-import { AutoVideo } from "@/components/site/AutoVideo";
+import { gallery } from "@/lib/gallery";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -419,12 +414,7 @@ function Process() {
 }
 
 function Showcase() {
-  const imgs = [
-    { src: m7, alt: "Baroque gold embroidery", ratio: "tall" as const },
-    { src: m1, alt: "Cuff monogram", ratio: "tall" as const },
-    { src: m24, alt: "Geometric satin stitch", ratio: "tall" as const },
-    { src: m21, alt: "Hands at the hoop", ratio: "tall" as const },
-  ];
+  const showcaseItems = gallery.slice(0, 4);
   return (
     <section className="py-16 md:py-24">
       <div className="container-luxe">
@@ -450,11 +440,40 @@ function Showcase() {
           </FadeIn>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-5">
-          {imgs.map((im, i) => (
-            <FadeIn key={i} delay={i * 0.08}>
-              <HoverImage src={im.src} alt={im.alt} ratio={im.ratio} />
-            </FadeIn>
-          ))}
+          {showcaseItems.map((g, i) => {
+            const isVideo =
+              g.src?.toLowerCase().endsWith(".mp4") ||
+              g.src?.toLowerCase().endsWith(".webm") ||
+              g.src?.toLowerCase().endsWith(".mov");
+            return (
+              <FadeIn key={g.src} delay={i * 0.08}>
+                <figure className="group relative overflow-hidden bg-muted aspect-[4/5] w-full h-full">
+                  {isVideo ? (
+                    <video
+                      src={g.src}
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
+                      autoPlay={false}
+                      controls
+                      preload="metadata"
+                    />
+                  ) : (
+                    <img
+                      src={g.src}
+                      alt={g.alt}
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
+                    />
+                  )}
+                  <figcaption className="absolute inset-x-0 bottom-0 p-4 md:p-5 bg-gradient-to-t from-foreground/85 to-transparent text-background opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10">
+                    <p className="text-[9px] uppercase tracking-[0.3em] text-[oklch(0.85_0.08_85)]">
+                      {g.category}
+                    </p>
+                    <p className="mt-1 text-xs leading-snug">{g.alt}</p>
+                  </figcaption>
+                </figure>
+              </FadeIn>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -511,56 +530,46 @@ function Atelier() {
           </FadeIn>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-5">
-          <FadeIn className="md:col-span-8">
-            <AutoVideo
-              src="/media/atelier-wide.mp4"
-              poster="/media/atelier-wide-poster.jpg"
-              ratio="wide"
-              ariaLabel="Industrial embroidery machine stitching at the Kenavid Monogram atelier"
-            />
-          </FadeIn>
-          <FadeIn delay={0.1} className="md:col-span-4">
-            <AutoVideo
-              src="/media/atelier-portrait.mp4"
-              poster="/media/atelier-portrait-poster.jpg"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
+          <FadeIn delay={0.1} className="">
+            <HoverImage
+              src="/media/m-6.jpg"
+              alt="Close up of needle work on a custom monogram piece"
               ratio="portrait"
-              ariaLabel="Close up of needle work on a custom monogram piece"
             />
           </FadeIn>
-          <FadeIn delay={0.12} className="md:col-span-7">
+          <FadeIn delay={0.12} className="">
             <HoverImage
               src={atelierBasketWide}
               alt="Branded Kenavid Monogram machine stitching a geometric pattern on canvas"
-              ratio="landscape"
+              ratio="portrait"
             />
           </FadeIn>
-          <FadeIn delay={0.18} className="md:col-span-5">
+          <FadeIn delay={0.18} className="">
             <HoverImage
               src={atelierOperator}
+              alt="Kenavid Monogram operator setting up a multi-needle embroidery machine"
+              ratio="portrait"
+            />
+          </FadeIn>
+          <FadeIn delay={0.18} className="">
+            <HoverImage
+              src="/media/m-2.jpg"
               alt="Kenavid Monogram operator setting up a multi-needle embroidery machine"
               ratio="landscape"
             />
           </FadeIn>
-          <FadeIn delay={0.2} className="md:col-span-12 lg:col-span-4">
-            <AutoVideo
-              src="/media/production-wide.mp4"
-              poster="/media/production-wide-poster.jpg"
-              ratio="wide"
-              ariaLabel="Live production run of a custom monogram on the Kenavid Monogram machine"
-            />
-          </FadeIn>
-          <FadeIn delay={0.28} className="md:col-span-6 lg:col-span-4">
+          <FadeIn delay={0.18} className="">
             <HoverImage
-              src={clientBasket}
-              alt="Kenavid Monogram machine detail - basket weave on linen"
+              src="/media/m-3.jpg"
+              alt="Kenavid Monogram operator setting up a multi-needle embroidery machine"
               ratio="landscape"
             />
           </FadeIn>
-          <FadeIn delay={0.3} className="md:col-span-6 lg:col-span-4">
+          <FadeIn delay={0.18} className="">
             <HoverImage
-              src={clientStars}
-              alt="Kenavid Monogram machine detail - star motif on brown leather"
+              src="/media/m-5.jpg"
+              alt="Kenavid Monogram operator setting up a multi-needle embroidery machine"
               ratio="landscape"
             />
           </FadeIn>

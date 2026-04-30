@@ -84,35 +84,51 @@ function Gallery() {
       <section className="container-luxe py-12 md:py-20">
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 md:gap-5 [grid-auto-flow:dense]">
           <AnimatePresence mode="popLayout">
-            {filtered.map((g, i) => (
-              <motion.figure
-                key={g.src}
-                layout
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                transition={{ duration: 0.6, delay: (i % 8) * 0.04, ease: [0.22, 1, 0.36, 1] }}
-                className={cn(
-                  "group relative overflow-hidden bg-muted",
-                  g.span === "tall" && "row-span-2 aspect-[3/5]",
-                  g.span === "wide" && "col-span-2 aspect-[16/10]",
-                  !g.span && "aspect-[4/5]",
-                )}
-              >
-                <img
-                  src={g.src}
-                  alt={g.alt}
-                  loading="lazy"
-                  className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
-                />
-                <figcaption className="absolute inset-x-0 bottom-0 p-4 md:p-5 bg-gradient-to-t from-foreground/85 to-transparent text-background opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                  <p className="text-[9px] uppercase tracking-[0.3em] text-[oklch(0.85_0.08_85)]">
-                    {g.category}
-                  </p>
-                  <p className="mt-1 text-xs leading-snug">{g.alt}</p>
-                </figcaption>
-              </motion.figure>
-            ))}
+            {filtered.map((g, i) => {
+              const isVideo =
+                g.src?.toLowerCase().endsWith(".mp4") ||
+                g.src?.toLowerCase().endsWith(".webm") ||
+                g.src?.toLowerCase().endsWith(".mov");
+              return (
+                <motion.figure
+                  key={g.src}
+                  layout
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.6, delay: (i % 8) * 0.04, ease: [0.22, 1, 0.36, 1] }}
+                  className={cn(
+                    "group relative overflow-hidden bg-muted",
+                    g.span === "tall" && "row-span-2 aspect-[3/5]",
+                    g.span === "wide" && "col-span-2 aspect-[16/10]",
+                    !g.span && "aspect-[4/5]",
+                  )}
+                >
+                  {isVideo ? (
+                    <video
+                      src={g.src}
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
+                      autoPlay={false}
+                      controls
+                      preload="metadata"
+                    />
+                  ) : (
+                    <img
+                      src={g.src}
+                      alt={g.alt}
+                      loading="lazy"
+                      className="absolute inset-0 h-full w-full object-cover transition-transform duration-[1100ms] ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:scale-[1.06]"
+                    />
+                  )}
+                  <figcaption className="absolute inset-x-0 bottom-0 p-4 md:p-5 bg-gradient-to-t from-foreground/85 to-transparent text-background opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none z-10">
+                    <p className="text-[9px] uppercase tracking-[0.3em] text-[oklch(0.85_0.08_85)]">
+                      {g.category}
+                    </p>
+                    <p className="mt-1 text-xs leading-snug">{g.alt}</p>
+                  </figcaption>
+                </motion.figure>
+              );
+            })}
           </AnimatePresence>
         </div>
       </section>
