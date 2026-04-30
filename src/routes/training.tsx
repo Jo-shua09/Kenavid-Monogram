@@ -9,8 +9,8 @@ import { waMessages } from "@/lib/whatsapp";
 import t1 from "@/assets/training-1.jpg";
 import t2 from "@/assets/training-2.jpg";
 import trainee from "@/assets/atelier-trainee.jpg";
-import m17 from "@/assets/m-17.jpg";
-import m22 from "@/assets/m-22.jpg";
+import m17 from "/media/m-7.jpg";
+import m22 from "/media/m-12.jpg";
 import { Check } from "lucide-react";
 
 export const Route = createFileRoute("/training")({
