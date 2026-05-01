@@ -40,8 +40,8 @@ export type GalleryItem = {
 };
 
 export const gallery: GalleryItem[] = [
-  { src: m1, alt: "Cuff monogram", category: "Apparel", span: "tall" },
-  { src: m2, alt: "Baroque gold embroidery", category: "Heritage", span: "tall" },
+  { src: m1, alt: "Agbada monogram", category: "Apparel", span: "tall" },
+  { src: m2, alt: "Baroque embroidery", category: "Heritage", span: "tall" },
   { src: m3, alt: "Geometric satin stitch", category: "Accessories", span: "tall" },
   { src: m4, alt: "Hands at the hoop", category: "Atelier", span: "tall" },
   { src: s1, alt: "Kenavid Couture atelier interior", category: "Atelier" },
