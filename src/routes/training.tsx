@@ -70,7 +70,7 @@ function LiveLab() {
         <FadeIn className="md:col-span-8">
           <AutoVideo
             src="/media/media-13.mp4"
-            poster="/media/media-13.mp4"
+            poster="/media/m-13.jpg"
             ratio="wide"
             ariaLabel="Trainee running a live monogram production job"
           />
@@ -139,8 +139,8 @@ function Intro() {
         />
         <HoverImage src={t1} alt="Student threading a multi-needle head" ratio="square" />
         <AutoVideo
-          src="/media/m-4.jpg"
-          poster="/media/m-4.jpg"
+          src="/media/m-6.jpg"
+          poster="/media/m-6.jpg"
           ratio="square"
           ariaLabel="Hands-on training session with a Kenavid Monogram machine"
         />
