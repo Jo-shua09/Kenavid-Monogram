@@ -139,8 +139,8 @@ function Intro() {
         />
         <HoverImage src={t1} alt="Student threading a multi-needle head" ratio="square" />
         <AutoVideo
-          src="/media/training-portrait.mp4"
-          poster="/media/training-portrait-poster.jpg"
+          src="/media/m-3.jpg"
+          poster="/media/m-3.jpg"
           ratio="square"
           ariaLabel="Hands-on training session with a Kenavid Monogram machine"
         />
