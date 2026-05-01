@@ -70,7 +70,7 @@ function LiveLab() {
         <FadeIn className="md:col-span-8">
           <AutoVideo
             src="/media/media-13.mp4"
-            poster="/media/m-13.jpg"
+            poster="/media/media-13.mp4"
             ratio="wide"
             ariaLabel="Trainee running a live monogram production job"
           />
