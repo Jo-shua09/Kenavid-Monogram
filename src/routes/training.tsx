@@ -69,7 +69,7 @@ function LiveLab() {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-3 md:gap-5">
         <FadeIn className="md:col-span-8">
           <AutoVideo
-            src="/media/training-wide.mp4"
+            src="/media/media-13.mp4"
             poster="/media/training-wide-poster.jpg"
             ratio="wide"
             ariaLabel="Trainee running a live monogram production job"
