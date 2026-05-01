@@ -24,8 +24,8 @@ export const Route = createFileRoute("/gallery")({
         content:
           "Selected monogram and embroidery work from the Kenavid Monogram atelier in Lagos.",
       },
-      { property: "og:image", content: "https://kenavidmonogram.vercel.app/logo.png" },
-      { name: "twitter:image", content: "https://kenavidmonogram.vercel.app/logo.png" },
+      { property: "og:image", content: "https://kenavidmonogram.com//logo.png" },
+      { name: "twitter:image", content: "https://kenavidmonogram.com//logo.png" },
     ],
   }),
   component: Gallery,

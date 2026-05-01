@@ -28,8 +28,8 @@ export const Route = createFileRoute("/training")({
         content:
           "Six-week hands-on training to master industrial monogram embroidery machines. Cohort-based, certified.",
       },
-      { property: "og:image", content: "https://kenavidmonogram.vercel.app/logo.png" },
-      { name: "twitter:image", content: "https://kenavidmonogram.vercel.app/logo.png" },
+      { property: "og:image", content: "https://kenavidmonogram.com//logo.png" },
+      { name: "twitter:image", content: "https://kenavidmonogram.com//logo.png" },
     ],
   }),
   component: Training,

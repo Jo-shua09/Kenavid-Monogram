@@ -60,8 +60,8 @@ export const Route = createRootRoute({
         content:
           "Premium monogram embroidery production and machine operation training in Lagos, Nigeria. Founded by Victor Atoyebi.",
       },
-      { property: "og:url", content: "https://kenavidmonogram.vercel.app/" },
-      { property: "og:image", content: "https://kenavidmonogram.vercel.app/og-image.jpg" },
+      { property: "og:url", content: "https://kenavidmonogram.com//" },
+      { property: "og:image", content: "https://kenavidmonogram.com//og-image.jpg" },
       { property: "og:image:alt", content: "Kenavid Monogram Embroidery Production" },
       { name: "twitter:card", content: "summary_large_image" },
       {
@@ -73,12 +73,12 @@ export const Route = createRootRoute({
         content:
           "Premium monogram embroidery production and machine operation training in Lagos, Nigeria. Founded by Victor Atoyebi.",
       },
-      { name: "twitter:image", content: "https://kenavidmonogram.vercel.app/og-image.jpg" },
+      { name: "twitter:image", content: "https://kenavidmonogram.com//og-image.jpg" },
     ],
     links: [
       { rel: "icon", type: "image/png", href: "/favicon.png" },
       { rel: "apple-touch-icon", href: "/logo.png" },
-      { rel: "canonical", href: "https://kenavidmonogram.vercel.app/" },
+      { rel: "canonical", href: "https://kenavidmonogram.com//" },
     ],
     scripts: [
       {
@@ -88,12 +88,12 @@ export const Route = createRootRoute({
           "@graph": [
             {
               "@type": "LocalBusiness",
-              "@id": "https://kenavidmonogram.vercel.app/#organization",
+              "@id": "https://kenavidmonogram.com//#organization",
               name: "Kenavid Monogram",
               alternateName: "Monogram Empire",
-              url: "https://kenavidmonogram.vercel.app/",
-              image: "https://kenavidmonogram.vercel.app/logo.png",
-              logo: "https://kenavidmonogram.vercel.app/logo.png",
+              url: "https://kenavidmonogram.com//",
+              image: "https://kenavidmonogram.com//logo.png",
+              logo: "https://kenavidmonogram.com//logo.png",
               description:
                 "Premium monogram embroidery atelier and machine operation training academy in Lagos.",
               founder: { "@type": "Person", name: "Victor Atoyebi" },
@@ -110,11 +110,11 @@ export const Route = createRootRoute({
             },
             {
               "@type": "WebSite",
-              "@id": "https://kenavidmonogram.vercel.app/#website",
-              url: "https://kenavidmonogram.vercel.app/",
+              "@id": "https://kenavidmonogram.com//#website",
+              url: "https://kenavidmonogram.com//",
               name: "Kenavid Monogram",
               publisher: {
-                "@id": "https://kenavidmonogram.vercel.app/#organization",
+                "@id": "https://kenavidmonogram.com//#organization",
               },
             },
           ],

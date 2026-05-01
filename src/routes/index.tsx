@@ -33,8 +33,8 @@ export const Route = createFileRoute("/")({
         content:
           "Precision-crafted premium monogram designs and expert machine operation training.",
       },
-      { property: "og:image", content: "https://kenavidmonogram.vercel.app/logo.png" },
-      { name: "twitter:image", content: "https://kenavidmonogram.vercel.app/logo.png" },
+      { property: "og:image", content: "https://kenavidmonogram.com//logo.png" },
+      { name: "twitter:image", content: "https://kenavidmonogram.com//logo.png" },
     ],
   }),
   component: Home,
